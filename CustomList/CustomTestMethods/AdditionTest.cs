@@ -87,5 +87,18 @@ namespace CustomTestMethods
 
             Assert.AreEqual(expectedResult, actualResult);
         }
+        public void AddingTheSameValueTwice()
+        {
+            CustomList<int> myList = new CustomList<int>();
+            int value = 1;
+            int valuetwo = 1;
+            int expectedResult = 2;
+
+            myList.Add(value);
+            myList.Add(valuetwo);
+            int actualResult = myList.Count;
+
+            Assert.AreEqual(expectedResult, actualResult);
+        }
     }
 }
