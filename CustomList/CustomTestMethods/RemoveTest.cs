@@ -1,16 +1,17 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using CustomListFramework;
 
 namespace CustomTestMethods
 {
     [TestClass]
-    public class SubtractionTest
+    public class RemoveTest
     {
         [TestMethod]
         public void RemovingUnitCountToNull()
         {
             //Arrange
-            CustomList<int> myList = new CustomList<int>();
+            MyCustomList<int> myList = new MyCustomList<int>();
             int value = 1;
             int expected = 0;
             //Act
@@ -20,10 +21,11 @@ namespace CustomTestMethods
             //Assert
             Assert.AreEqual(expected, actual);
         }
-        public void RemovingUnitCound()
+        [TestMethod]
+        public void RemovingUnitCount()
         {
             //Arrange
-            CustomList<int> myList = new CustomList<int>();
+            MyCustomList<int> myList = new MyCustomList<int>();
             int value = 1;
             int valuetwo = 2;
             int expected = 1;
@@ -35,32 +37,11 @@ namespace CustomTestMethods
             //Assert
             Assert.AreEqual(expected, actual);
         }
-        public void RemovingFromListShorteningCapacity()
-        {
-
-            //Arrange
-            CustomList<int> myList = new CustomList<int>();
-            int valueone = 1;
-            int valuetwo = 2;
-            int valuethree = 3;
-            int valuefour = 4;
-            int valuefive = 5;
-            int expected = 4;
-            //Act
-            myList.Add(valueone);
-            myList.Add(valuetwo);
-            myList.Add(valuethree);
-            myList.Add(valuefour);
-            myList.Add(valuefive);
-            myList.Remove(valuefive);
-            int actual = myList.Capacity;
-            //Assert
-            Assert.AreEqual(expected, actual);
-        }
+        [TestMethod]
         public void RemovingPreviousUnitIndex()
         {
             //Arrange
-            CustomList<int> myList = new CustomList<int>();
+            MyCustomList<int> myList = new MyCustomList<int>();
             int value = 1;
             int valuetwo = 2;
             int expected = 2;
@@ -72,10 +53,11 @@ namespace CustomTestMethods
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
         public void RemovingUnitAfterIndex()
         {
             //Arrange
-            CustomList<int> myList = new CustomList<int>();
+            MyCustomList<int> myList = new MyCustomList<int>();
             int value = 1;
             int valuetwo = 2;
             int valuethree = 3;
@@ -89,12 +71,12 @@ namespace CustomTestMethods
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
         public void RemovingSameValueUnitFromList()
         {
-            CustomList<int> myList = new CustomList<int>();
+            MyCustomList<int> myList = new MyCustomList<int>();
             int value = 1;
             int valuetwo = 2;
-            int valuethree = 1;
             int expected = 2;
 
             myList.Add(value);

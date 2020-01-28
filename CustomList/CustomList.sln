@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomList", "CustomList\CustomList.csproj", "{E2B60CF7-C62D-41EC-98ED-816E221A9A08}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomTestMethods", "CustomTestMethods\CustomTestMethods.csproj", "{35940313-2716-47E5-83BA-5BAF27C8E9C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomListFramework", "CustomListFramework\CustomListFramework.csproj", "{AC078BF5-860C-4707-BA40-CD29CB34F3F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E2B60CF7-C62D-41EC-98ED-816E221A9A08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E2B60CF7-C62D-41EC-98ED-816E221A9A08}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E2B60CF7-C62D-41EC-98ED-816E221A9A08}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E2B60CF7-C62D-41EC-98ED-816E221A9A08}.Release|Any CPU.Build.0 = Release|Any CPU
 		{35940313-2716-47E5-83BA-5BAF27C8E9C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{35940313-2716-47E5-83BA-5BAF27C8E9C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35940313-2716-47E5-83BA-5BAF27C8E9C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35940313-2716-47E5-83BA-5BAF27C8E9C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC078BF5-860C-4707-BA40-CD29CB34F3F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC078BF5-860C-4707-BA40-CD29CB34F3F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC078BF5-860C-4707-BA40-CD29CB34F3F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC078BF5-860C-4707-BA40-CD29CB34F3F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

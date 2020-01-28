@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using CustomListFramework;
 
 namespace CustomTestMethods
 {
@@ -10,9 +11,9 @@ namespace CustomTestMethods
         public void CheckZeroIndexAdd()
         {
             //Arrange
-            CustomList<int> myList = new CustomList<int>();
+            MyCustomList<int> myList = new MyCustomList<int>();
             int value = 5;
-            int expectedresult = 0;
+            int expectedresult = 5;
             //Act
             myList.Add(value);
             int actualresult = myList[0];
@@ -24,10 +25,10 @@ namespace CustomTestMethods
         public void CheckIndexAfterOne()
         {
             //Arrange
-            CustomList<int> myList = new CustomList<int>();
+            MyCustomList<int> myList = new MyCustomList<int>();
             int value = 5;
             int valuetwo = 3;
-            int expectedresult = 1;
+            int expectedresult = 3;
             //Act
             myList.Add(value);
             myList.Add(valuetwo);
@@ -40,20 +41,22 @@ namespace CustomTestMethods
         public void CheckCountAfterAddingFromNull()
         {
             //Arrange
-            CustomList<int> myList = new CustomList<int>();
+            MyCustomList<int> myList = new MyCustomList<int>();
             int value = 4;
-    
+            int expectedResult = 1;
+
             //Act
             myList.Add(value);
-            int expectedResult = 1;
+            int actualResult = myList.Count;
 
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
+        [TestMethod]
         public void CheckCountAfterAddingMoreThanOne()
         {
             //Arrange
-            CustomList<int> myList = new CustomList<int>();
+            MyCustomList<int> myList = new MyCustomList<int>();
             int value = 2;
             int valuetwo = 3;
             int expectedResult = 2;
@@ -68,9 +71,10 @@ namespace CustomTestMethods
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
+        [TestMethod]
         public void AddCapacityOnceFull()
         {
-            CustomList<int> myList = new CustomList<int>();
+            MyCustomList<int> myList = new MyCustomList<int>();
             int valueone = 1;
             int valuetwo = 2;
             int valuethree = 3;
@@ -87,9 +91,10 @@ namespace CustomTestMethods
 
             Assert.AreEqual(expectedResult, actualResult);
         }
+        [TestMethod]
         public void AddingTheSameValueTwice()
         {
-            CustomList<int> myList = new CustomList<int>();
+            MyCustomList<int> myList = new MyCustomList<int>();
             int value = 1;
             int valuetwo = 1;
             int expectedResult = 2;
