@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,10 +7,11 @@ using System.Threading.Tasks;
 
 namespace CustomListFramework
 {
-    public class MyCustomList<T>
+    public class MyCustomList<T> : IEnumerable
     {
         //Member Variables (HAS A)
-        T[] items;
+        public T[] items;
+        
         int capacity;
         public int Capacity { get { return capacity; } set { capacity = value; } }
         int count;
@@ -78,6 +80,23 @@ namespace CustomListFramework
                 items = temporaryArray;
             }
             return removed;
+        }
+        public override string ToString()
+        {
+            StringBuilder itemString = new StringBuilder();
+            for (int i = 0; i < Count; i++)
+            {
+                itemString.Append(items[i].ToString());
+            }
+            return itemString.ToString();
+        }
+        public IEnumerator GetEnumerator()
+        {
+            for (int i = 0; i < Count; i++)
+            {
+                yield return items[i];
+            }
+            yield return "List is complete";
         }
     }
 }
