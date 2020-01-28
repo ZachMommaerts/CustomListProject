@@ -90,6 +90,16 @@ namespace CustomListFramework
             }
             return itemString.ToString();
         }
+        public MyCustomList<T> Zip(MyCustomList<T> myListOne, MyCustomList<T> myListTwo)
+        {
+            for (int i = 0; i < myListOne.Count; i++)
+            {
+                yield return myListOne[i];
+                yield return myListTwo[i];
+            }
+            yield return "List is complete";
+        }
+
         public IEnumerator GetEnumerator()
         {
             for (int i = 0; i < Count; i++)
